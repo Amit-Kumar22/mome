@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 350 100% 98%;
+    --foreground: 263 35% 25%;
+
+    /* Card backgrounds */
+    --card: 350 100% 98%;
+    --card-foreground: 263 35% 25%;
+
+    /* Popover colors */
+    --popover: 350 100% 98%;
+    --popover-foreground: 263 35% 25%;
+
+    /* Primary colors - Purple shades */
+    --primary: 263 35% 52%;
+    --primary-foreground: 350 100% 98%;
+
+    /* Secondary colors - Light purple */
+    --secondary: 272 35% 68%;
+    --secondary-foreground: 263 35% 25%;
+
+    /* Muted colors - Light pink mix */
+    --muted: 350 75% 94%;
+    --muted-foreground: 272 25% 45%;
+
+    /* Accent colors - Pink */
+    --accent: 344 77% 76%;
+    --accent-foreground: 263 35% 25%;
+
+    /* Destructive (keep red for errors) */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 350 100% 98%;
+
+    /* Borders and inputs */
+    --border: 350 60% 88%;
+    --input: 350 50% 92%;
+    --ring: 263 35% 52%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+    letter-spacing: -0.025em;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
+  }
+}
+
+@layer components {
+  .bg-gradient-purple-pink {
+    background: linear-gradient(135deg, #7F55B1, #F49BAB);
+  }
+
+  .bg-gradient-light-theme {
+    background: linear-gradient(135deg, #FFE1E0, #9B7EBD);
+  }
+
+  .shadow-theme {
+    box-shadow: 0 4px 6px -1px hsl(263 35% 52% / 0.1), 0 2px 4px -1px hsl(344 77% 76% / 0.06);
+  }
+
+  .text-gradient-animated {
+    @apply bg-gradient-to-r from-purple-600 via-pink-500 to-purple-500 bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .btn-hover-glow {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .btn-hover-glow:hover {
+    @apply transform scale-105 shadow-lg;
+    box-shadow: 0 10px 25px -5px hsl(263 35% 52% / 0.4), 0 10px 10px -5px hsl(344 77% 76% / 0.2);
+  }
+
+  .nav-hover-purple {
+    @apply transition-all duration-300 ease-in-out relative px-4 py-2 rounded-lg font-medium;
+  }
+
+  .nav-hover-purple:hover {
+    @apply text-yen-purple transform scale-105 shadow-md;
+    background: linear-gradient(135deg, rgba(127, 85, 177, 0.1), rgba(244, 155, 171, 0.1));
+  }
+
+  .nav-active {
+    @apply text-yen-purple font-semibold;
+    background: linear-gradient(135deg, rgba(127, 85, 177, 0.15), rgba(244, 155, 171, 0.15)) !important;
+    box-shadow: 0 2px 8px rgba(127, 85, 177, 0.2);
+  }
+
+  .bg-yen-purple {
+    background-color: #7F55B1;
+  }
+
+  .text-yen-purple {
+    color: #7F55B1;
+  }
+
+  .text-yen-pink {
+    color: #F49BAB;
+  }
+
+  .text-yen-pink-light {
+    color: #FFE1E0;
+  }
+
+  .border-yen-purple {
+    border-color: #7F55B1;
+  }
+
+  .slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
