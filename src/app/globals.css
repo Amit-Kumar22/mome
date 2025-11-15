@@ -4,42 +4,42 @@
 
 @layer base {
   :root {
-    /* Base colors */
-    --background: 350 100% 98%;
-    --foreground: 263 35% 25%;
+    /* Base colors - Light background with strong contrast */
+    --background: 210 25% 98%;
+    --foreground: 212 25% 20%;
 
     /* Card backgrounds */
-    --card: 350 100% 98%;
-    --card-foreground: 263 35% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 212 25% 20%;
 
     /* Popover colors */
-    --popover: 350 100% 98%;
-    --popover-foreground: 263 35% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 212 25% 20%;
 
-    /* Primary colors - Purple shades */
-    --primary: 263 35% 52%;
-    --primary-foreground: 350 100% 98%;
+    /* Primary colors - Navy Blue (from logo) */
+    --primary: 212 25% 30%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary colors - Light purple */
-    --secondary: 272 35% 68%;
-    --secondary-foreground: 263 35% 25%;
+    /* Secondary colors - Copper/Orange (from logo) */
+    --secondary: 27 57% 46%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Muted colors - Light pink mix */
-    --muted: 350 75% 94%;
-    --muted-foreground: 272 25% 45%;
+    /* Muted colors - Light slate */
+    --muted: 210 25% 95%;
+    --muted-foreground: 215 15% 45%;
 
-    /* Accent colors - Pink */
-    --accent: 344 77% 76%;
-    --accent-foreground: 263 35% 25%;
+    /* Accent colors - Copper tones */
+    --accent: 27 57% 56%;
+    --accent-foreground: 0 0% 100%;
 
     /* Destructive (keep red for errors) */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 350 100% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     /* Borders and inputs */
-    --border: 350 60% 88%;
-    --input: 350 50% 92%;
-    --ring: 263 35% 52%;
+    --border: 210 20% 88%;
+    --input: 210 20% 92%;
+    --ring: 212 25% 30%;
 
     --radius: 0.75rem;
   }
@@ -56,7 +56,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
+    @apply font-semibold text-momentus-text;
     letter-spacing: -0.025em;
   }
 
@@ -70,86 +70,65 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-accent rounded-full;
+    @apply bg-momentus-copper rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary;
+    @apply bg-momentus-copper-dark;
   }
 }
 
 @layer components {
-  .bg-gradient-purple-pink {
-    background: linear-gradient(135deg, #7F55B1, #F49BAB);
+  /* Background utilities */
+  .bg-light-theme {
+    background-color: #F5F7FA;
   }
 
-  .bg-gradient-light-theme {
-    background: linear-gradient(135deg, #FFE1E0, #9B7EBD);
+  .bg-momentus-section {
+    background-color: #FAFBFC;
   }
 
   .shadow-theme {
-    box-shadow: 0 4px 6px -1px hsl(263 35% 52% / 0.1), 0 2px 4px -1px hsl(344 77% 76% / 0.06);
+    box-shadow: 0 4px 6px -1px rgba(61, 74, 92, 0.08), 0 2px 4px -1px rgba(61, 74, 92, 0.04);
   }
 
-  .text-gradient-animated {
-    @apply bg-gradient-to-r from-purple-600 via-pink-500 to-purple-500 bg-clip-text text-transparent;
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease-in-out infinite;
+  .shadow-theme-lg {
+    box-shadow: 0 10px 40px rgba(61, 74, 92, 0.12);
   }
 
-  @keyframes gradient-shift {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-
-  .btn-hover-glow {
+  /* Button hover effects */
+  .btn-hover-lift {
     @apply transition-all duration-300 ease-in-out;
   }
 
-  .btn-hover-glow:hover {
-    @apply transform scale-105 shadow-lg;
-    box-shadow: 0 10px 25px -5px hsl(263 35% 52% / 0.4), 0 10px 10px -5px hsl(344 77% 76% / 0.2);
+  .btn-hover-lift:hover {
+    @apply transform -translate-y-0.5 shadow-theme-lg;
   }
 
-  .nav-hover-purple {
-    @apply transition-all duration-300 ease-in-out relative px-4 py-2 rounded-lg font-medium;
+  /* Navigation styles */
+  .nav-hover-momentus {
+    @apply transition-all duration-300 ease-in-out relative px-4 py-2 rounded-lg font-medium text-momentus-text;
   }
 
-  .nav-hover-purple:hover {
-    @apply text-yen-purple transform scale-105 shadow-md;
-    background: linear-gradient(135deg, rgba(127, 85, 177, 0.1), rgba(244, 155, 171, 0.1));
+  .nav-hover-momentus:hover {
+    @apply text-momentus-copper transform -translate-y-0.5 bg-momentus-slate;
   }
 
   .nav-active {
-    @apply text-yen-purple font-semibold;
-    background: linear-gradient(135deg, rgba(127, 85, 177, 0.15), rgba(244, 155, 171, 0.15)) !important;
-    box-shadow: 0 2px 8px rgba(127, 85, 177, 0.2);
+    @apply text-momentus-copper font-semibold bg-momentus-slate;
+    box-shadow: 0 2px 8px rgba(184, 115, 51, 0.15);
   }
 
-  .bg-yen-purple {
-    background-color: #7F55B1;
+  /* Text color utilities */
+  .text-momentus-primary {
+    color: #3D4A5C;
   }
 
-  .text-yen-purple {
-    color: #7F55B1;
+  .text-momentus-accent {
+    color: #B87333;
   }
 
-  .text-yen-pink {
-    color: #F49BAB;
-  }
-
-  .text-yen-pink-light {
-    color: #FFE1E0;
-  }
-
-  .border-yen-purple {
-    border-color: #7F55B1;
-  }
-
+  /* Animation classes */
   .slide-up {
     animation: slideUp 0.6s ease-out;
   }

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-light-theme">
+    <div className="min-h-screen bg-light-theme">
       {/* Header */}
       <Navbar />
 
@@ -19,24 +19,24 @@ export default function AboutPage() {
       <section className="container mx-auto px-4 py-16">
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient-animated">About</span>{" "}
-            <span className="text-yen-purple">Momentus Motion</span>
+            <span className="text-momentus-copper">About</span>{" "}
+            <span className="text-momentus-navy">Momentus Motion</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-momentus-text-light max-w-3xl mx-auto">
             Driving innovation and excellence in business solutions worldwide
           </p>
         </div>
 
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme">
+          <Card className="bg-white shadow-theme">
             <CardHeader>
-              <CardTitle className="text-2xl text-yen-purple flex items-center gap-3">
+              <CardTitle className="text-2xl text-momentus-navy flex items-center gap-3">
                 🎯 Our Mission
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-momentus-text-light leading-relaxed">
                 To deliver transformative business solutions that empower organizations 
                 to achieve sustainable growth, operational excellence, and market leadership 
                 through strategic innovation and partnership excellence.
@@ -44,14 +44,14 @@ export default function AboutPage() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme">
+          <Card className="bg-white shadow-theme">
             <CardHeader>
-              <CardTitle className="text-2xl text-yen-purple flex items-center gap-3">
+              <CardTitle className="text-2xl text-momentus-navy flex items-center gap-3">
                 🔮 Our Vision
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-momentus-text-light leading-relaxed">
                 To be the global leader in business transformation and innovation, 
                 creating lasting value for our clients through cutting-edge solutions, 
                 strategic insights, and unwavering commitment to excellence.
@@ -62,94 +62,94 @@ export default function AboutPage() {
 
         {/* What We Offer */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12 text-yen-purple">
+          <h2 className="text-3xl font-bold text-center mb-12 text-momentus-navy">
             What We Offer
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-shadow">
+            <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-shadow">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-purple-pink rounded-lg mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-momentus-copper rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-white text-3xl">🚀</span>
                 </div>
-                <CardTitle className="text-xl text-yen-purple">Strategic Consulting</CardTitle>
+                <CardTitle className="text-xl text-momentus-navy">Strategic Consulting</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-momentus-text-light">
                   Comprehensive business strategy development, market positioning, 
                   and growth planning to help organizations achieve their goals.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-shadow">
+            <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-shadow">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-purple-pink rounded-lg mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-momentus-copper rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-white text-3xl">👥</span>
                 </div>
-                <CardTitle className="text-xl text-yen-purple">Digital Transformation</CardTitle>
+                <CardTitle className="text-xl text-momentus-navy">Digital Transformation</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-momentus-text-light">
                   End-to-end digital solutions including process automation, 
                   technology integration, and digital strategy implementation.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-shadow">
+            <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-shadow">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-purple-pink rounded-lg mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-momentus-copper rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-white text-3xl">💰</span>
                 </div>
-                <CardTitle className="text-xl text-yen-purple">Financial Planning</CardTitle>
+                <CardTitle className="text-xl text-momentus-navy">Financial Planning</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-momentus-text-light">
                   Expert financial analysis, budgeting, investment strategies, 
                   and capital optimization for sustainable business growth.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-shadow">
+            <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-shadow">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-purple-pink rounded-lg mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-momentus-copper rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-white text-3xl">🌐</span>
                 </div>
-                <CardTitle className="text-xl text-yen-purple">Market Analysis</CardTitle>
+                <CardTitle className="text-xl text-momentus-navy">Market Analysis</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-momentus-text-light">
                   In-depth market research, competitive analysis, and consumer insights 
                   to drive informed business decisions and strategies.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-shadow">
+            <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-shadow">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-purple-pink rounded-lg mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-momentus-copper rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-white text-3xl">📚</span>
                 </div>
-                <CardTitle className="text-xl text-yen-purple">Brand Development</CardTitle>
+                <CardTitle className="text-xl text-momentus-navy">Brand Development</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-momentus-text-light">
                   Complete brand strategy, identity design, positioning, and 
                   marketing campaigns to build powerful market presence.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-shadow">
+            <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-shadow">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-purple-pink rounded-lg mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-momentus-copper rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-white text-3xl">🏆</span>
                 </div>
-                <CardTitle className="text-xl text-yen-purple">Partnership Solutions</CardTitle>
+                <CardTitle className="text-xl text-momentus-navy">Partnership Solutions</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-momentus-text-light">
                   Strategic alliance formation, joint venture structuring, and 
                   partnership management for mutual business success.
                 </p>
@@ -160,17 +160,16 @@ export default function AboutPage() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Card className="bg-gradient-purple-pink text-white max-w-2xl mx-auto">
+          <Card className="bg-momentus-navy text-white max-w-2xl mx-auto shadow-theme-lg">
             <CardContent className="pt-8 pb-8">
               <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
-              <p className="text-lg mb-6 opacity-90">
+              <p className="text-lg mb-6 text-white/90">
                 Partner with Momentus Motion Corporation for strategic growth and innovation.
               </p>
               <Link href="/contact">
                 <Button 
                   size="lg" 
-                  variant="secondary"
-                  className="bg-white text-yen-purple hover:bg-gray-100 btn-hover-glow"
+                  className="bg-momentus-copper hover:bg-momentus-copper-light text-white btn-hover-lift"
                 >
                   Get in Touch
                 </Button>
@@ -181,9 +180,9 @@ export default function AboutPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-yen-purple text-white py-8 mt-20">
+      <footer className="bg-momentus-navy-dark text-white py-8 mt-20">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-yen-pink-light">
+          <p className="text-white/70">
             © 2025 Momentus Motion Corporation. Driving innovation and excellence in business solutions.
           </p>
         </div>

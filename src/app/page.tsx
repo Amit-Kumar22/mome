@@ -5,7 +5,11 @@ import Image from "next/image";
 import { useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/layout/Navbar";
+import HeroSection from "@/components/sections/HeroSection";
+import GallerySection from "@/components/sections/GallerySection";
+import PlanningSection from "@/components/sections/PlanningSection";
+import FAQSection from "@/components/sections/FAQSection";
+import ContactSection from "@/components/sections/ContactSection";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Dummy donation data
@@ -115,18 +119,30 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-light-theme">
-      {/* Header */}
-      <Navbar />
+    <div className="min-h-screen bg-light-theme">
+      {/* Hero Section */}
+      <HeroSection />
 
-      <section className="container mx-auto px-4 py-20">
+      {/* Gallery Section */}
+      <GallerySection />
+
+      {/* Planning Section */}
+      <PlanningSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* Contact Section */}
+      <ContactSection />
+
+      {/* <section className="container mx-auto px-4 py-20">
         <div className="text-center max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-8 slide-up">
-            <span className="text-gradient-animated">Empowering</span>{" "}
-            <span className="text-yen-purple">Business</span>{" "}
-            <span className="text-yen-pink">Innovation</span>
+            <span className="text-momentus-copper">Empowering</span>{" "}
+            <span className="text-momentus-navy">Business</span>{" "}
+            <span className="text-momentus-navy-light">Innovation</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 fade-in">
+          <p className="text-xl md:text-2xl text-momentus-text-light max-w-3xl mx-auto mb-12 fade-in">
             Momentus Motion Corporation - Driving innovation and excellence in business solutions.
             Join us in creating transformative experiences that propel businesses forward.
           </p>
@@ -134,7 +150,7 @@ export default function HomePage() {
             <Link href="/about">
               <Button
                 size="lg"
-                className="btn-hover-glow bg-gradient-purple-pink text-lg px-8 py-4"
+                className="btn-hover-lift bg-momentus-copper hover:bg-momentus-copper-dark text-white text-lg px-8 py-4"
               >
                 Discover Our Story
               </Button>
@@ -143,7 +159,7 @@ export default function HomePage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="btn-hover-glow text-lg px-8 py-4"
+                className="btn-hover-lift text-lg px-8 py-4 border-2 border-momentus-navy text-momentus-navy hover:bg-momentus-navy hover:text-white"
               >
                 View Our Work
               </Button>
@@ -151,43 +167,43 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Statistics */}
+        
         <div className="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme text-center hover:shadow-lg transition-all">
+          <Card className="bg-white shadow-theme text-center hover:shadow-theme-lg transition-all">
             <CardContent className="p-6">
-              <div className="text-4xl font-bold text-yen-purple mb-2">250+</div>
-              <div className="text-muted-foreground">Happy Clients</div>
+              <div className="text-4xl font-bold text-momentus-copper mb-2">250+</div>
+              <div className="text-momentus-text-light">Happy Clients</div>
             </CardContent>
           </Card>
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme text-center hover:shadow-lg transition-all">
+          <Card className="bg-white shadow-theme text-center hover:shadow-theme-lg transition-all">
             <CardContent className="p-6">
-              <div className="text-4xl font-bold text-yen-purple mb-2">$5M+</div>
-              <div className="text-muted-foreground">Revenue Generated</div>
+              <div className="text-4xl font-bold text-momentus-copper mb-2">$5M+</div>
+              <div className="text-momentus-text-light">Revenue Generated</div>
             </CardContent>
           </Card>
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme text-center hover:shadow-lg transition-all">
+          <Card className="bg-white shadow-theme text-center hover:shadow-theme-lg transition-all">
             <CardContent className="p-6">
-              <div className="text-4xl font-bold text-yen-purple mb-2">50+</div>
-              <div className="text-muted-foreground">Projects Completed</div>
+              <div className="text-4xl font-bold text-momentus-copper mb-2">50+</div>
+              <div className="text-momentus-text-light">Projects Completed</div>
             </CardContent>
           </Card>
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme text-center hover:shadow-lg transition-all">
+          <Card className="bg-white shadow-theme text-center hover:shadow-theme-lg transition-all">
             <CardContent className="p-6">
-              <div className="text-4xl font-bold text-yen-purple mb-2">98%</div>
-              <div className="text-muted-foreground">Client Satisfaction</div>
+              <div className="text-4xl font-bold text-momentus-copper mb-2">98%</div>
+              <div className="text-momentus-text-light">Client Satisfaction</div>
             </CardContent>
           </Card>
         </div>
-      </section>
+      </section> */}
 
       {/* Recent Contributions Section */}
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-          <span className="text-yen-purple">Recent Contributors</span>
+          <span className="text-momentus-navy">Recent Contributors</span>
         </h2>
         <div className="relative">
           <button
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 rounded-full shadow p-2 border border-yen-purple hover:bg-yen-purple hover:text-white transition"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow p-2 border-2 border-momentus-copper hover:bg-momentus-copper hover:text-white transition"
             onClick={() => scroll('left')}
             aria-label="Scroll left"
             type="button"
@@ -200,21 +216,21 @@ export default function HomePage() {
             style={{ scrollBehavior: 'smooth', scrollbarWidth: 'none' }}
           >
             {dummyDonations.map((donation) => (
-              <Card key={donation.id} className="w-56 min-w-[14rem] bg-white/80 shadow-theme border border-yen-purple/20 flex-shrink-0">
+              <Card key={donation.id} className="w-56 min-w-[14rem] bg-white shadow-theme border border-momentus-slate-dark flex-shrink-0">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src={donation.profileImage} alt={donation.donorName} width={48} height={48} className="rounded-full mb-1 border border-yen-purple" />
-                  <CardTitle className="text-base text-yen-purple text-center w-full truncate">{donation.donorName}</CardTitle>
+                  <Image src={donation.profileImage} alt={donation.donorName} width={48} height={48} className="rounded-full mb-1 border-2 border-momentus-copper" />
+                  <CardTitle className="text-base text-momentus-navy text-center w-full truncate">{donation.donorName}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <div className="text-xs text-muted-foreground mb-1">${donation.amount.toLocaleString()}</div>
-                  <div className="text-xs text-muted-foreground mb-1">{donation.purpose}</div>
-                  <div className="text-xs text-muted-foreground">{donation.donorEmail}</div>
+                  <div className="text-xs text-momentus-text-light mb-1">${donation.amount.toLocaleString()}</div>
+                  <div className="text-xs text-momentus-text-light mb-1">{donation.purpose}</div>
+                  <div className="text-xs text-momentus-text-light">{donation.donorEmail}</div>
                 </CardContent>
               </Card>
             ))}
           </div>
           <button
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 rounded-full shadow p-2 border border-yen-purple hover:bg-yen-purple hover:text-white transition"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow p-2 border-2 border-momentus-copper hover:bg-momentus-copper hover:text-white transition"
             onClick={() => scroll('right')}
             aria-label="Scroll right"
             type="button"
@@ -225,58 +241,58 @@ export default function HomePage() {
       </section>
       
       {/* Features Section */}
-      <section className="bg-white/40 backdrop-blur-sm py-20">
+      <section className="bg-momentus-section py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-yen-purple">Why Choose</span>{" "}
-              <span className="text-gradient-animated">Momentus Motion?</span>
+              <span className="text-momentus-navy">Why Choose</span>{" "}
+              <span className="text-momentus-copper">Momentus Motion?</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-momentus-text-light max-w-3xl mx-auto">
               We provide comprehensive business solutions tailored to accelerate your company&apos;s growth and success.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-all">
+            <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-all">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-purple-pink rounded-full flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-momentus-copper rounded-lg flex items-center justify-center mb-4">
                   <span className="text-2xl text-white">🚀</span>
                 </div>
-                <CardTitle className="text-2xl text-yen-purple">Strategic Innovation</CardTitle>
+                <CardTitle className="text-2xl text-momentus-navy">Strategic Innovation</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-momentus-text-light">
                   Transform your business with cutting-edge strategies and innovative solutions 
                   that drive measurable results and sustainable growth.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-all">
+            <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-all">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-purple-pink rounded-full flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-momentus-copper rounded-lg flex items-center justify-center mb-4">
                   <span className="text-2xl text-white">🤝</span>
                 </div>
-                <CardTitle className="text-2xl text-yen-purple">Partnership Excellence</CardTitle>
+                <CardTitle className="text-2xl text-momentus-navy">Partnership Excellence</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-momentus-text-light">
                   Build lasting partnerships with industry leaders and leverage our extensive 
                   network to unlock new opportunities and markets.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-all">
+            <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-all">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-purple-pink rounded-full flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-momentus-copper rounded-lg flex items-center justify-center mb-4">
                   <span className="text-2xl text-white">📈</span>
                 </div>
-                <CardTitle className="text-2xl text-yen-purple">Accelerated Growth</CardTitle>
+                <CardTitle className="text-2xl text-momentus-navy">Accelerated Growth</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-momentus-text-light">
                   Experience rapid business expansion with our proven methodologies, expert 
                   guidance, and comprehensive support systems.
                 </p>
@@ -290,94 +306,94 @@ export default function HomePage() {
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient-animated">Our</span>{" "}
-            <span className="text-yen-purple">Services</span>
+            <span className="text-momentus-copper">Our</span>{" "}
+            <span className="text-momentus-navy">Services</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-momentus-text-light max-w-3xl mx-auto">
             Comprehensive business solutions designed to elevate your company at every stage of growth.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-all">
+          <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-all">
             <CardHeader>
-              <CardTitle className="text-xl text-yen-purple">Business Consulting</CardTitle>
+              <CardTitle className="text-xl text-momentus-navy">Business Consulting</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-momentus-text-light mb-4">
                 Strategic guidance from industry experts to optimize operations and drive growth.
               </p>
-              <Button variant="outline" size="sm" className="btn-hover-glow">
+              <Button variant="outline" size="sm" className="btn-hover-lift border-momentus-copper text-momentus-copper hover:bg-momentus-copper hover:text-white">
                 Learn More
               </Button>
             </CardContent>
           </Card>
 
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-all">
+          <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-all">
             <CardHeader>
-              <CardTitle className="text-xl text-yen-purple">Digital Transformation</CardTitle>
+              <CardTitle className="text-xl text-momentus-navy">Digital Transformation</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-momentus-text-light mb-4">
                 Modernize your business with cutting-edge technology solutions and automation.
               </p>
-              <Button variant="outline" size="sm" className="btn-hover-glow">
+              <Button variant="outline" size="sm" className="btn-hover-lift border-momentus-copper text-momentus-copper hover:bg-momentus-copper hover:text-white">
                 Discover More
               </Button>
             </CardContent>
           </Card>
 
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-all">
+          <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-all">
             <CardHeader>
-              <CardTitle className="text-xl text-yen-purple">Market Analysis</CardTitle>
+              <CardTitle className="text-xl text-momentus-navy">Market Analysis</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-momentus-text-light mb-4">
                 In-depth market research and competitive analysis to inform strategic decisions.
               </p>
-              <Button variant="outline" size="sm" className="btn-hover-glow">
+              <Button variant="outline" size="sm" className="btn-hover-lift border-momentus-copper text-momentus-copper hover:bg-momentus-copper hover:text-white">
                 Explore
               </Button>
             </CardContent>
           </Card>
 
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-all">
+          <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-all">
             <CardHeader>
-              <CardTitle className="text-xl text-yen-purple">Brand Development</CardTitle>
+              <CardTitle className="text-xl text-momentus-navy">Brand Development</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-momentus-text-light mb-4">
                 Build a powerful brand identity that resonates with your target audience.
               </p>
-              <Button variant="outline" size="sm" className="btn-hover-glow">
+              <Button variant="outline" size="sm" className="btn-hover-lift border-momentus-copper text-momentus-copper hover:bg-momentus-copper hover:text-white">
                 Get Started
               </Button>
             </CardContent>
           </Card>
 
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-all">
+          <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-all">
             <CardHeader>
-              <CardTitle className="text-xl text-yen-purple">Financial Planning</CardTitle>
+              <CardTitle className="text-xl text-momentus-navy">Financial Planning</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-momentus-text-light mb-4">
                 Comprehensive financial strategies to ensure long-term sustainability and profitability.
               </p>
-              <Button variant="outline" size="sm" className="btn-hover-glow">
+              <Button variant="outline" size="sm" className="btn-hover-lift border-momentus-copper text-momentus-copper hover:bg-momentus-copper hover:text-white">
                 View Details
               </Button>
             </CardContent>
           </Card>
 
-          <Card className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-all">
+          <Card className="bg-white shadow-theme hover:shadow-theme-lg transition-all">
             <CardHeader>
-              <CardTitle className="text-xl text-yen-purple">Partnership Solutions</CardTitle>
+              <CardTitle className="text-xl text-momentus-navy">Partnership Solutions</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-momentus-text-light mb-4">
                 Strategic alliances and partnerships to expand your business reach and capabilities.
               </p>
-              <Button variant="outline" size="sm" className="btn-hover-glow">
+              <Button variant="outline" size="sm" className="btn-hover-lift border-momentus-copper text-momentus-copper hover:bg-momentus-copper hover:text-white">
                 Partner With Us
               </Button>
             </CardContent>
@@ -386,21 +402,21 @@ export default function HomePage() {
       </section>
 
       {/* Our Advisors Section */}
-      <section className="bg-white/40 backdrop-blur-sm py-20">
+      <section className="bg-momentus-section py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-yen-purple">Meet Our</span>{" "}
-              <span className="text-gradient-animated">Expert Advisors</span>
+              <span className="text-momentus-navy">Meet Our</span>{" "}
+              <span className="text-momentus-copper">Expert Advisors</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-momentus-text-light max-w-3xl mx-auto">
               Learn from experienced professionals who are passionate about driving business success and innovation.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {dummyMentors.map((mentor) => (
-              <Card key={mentor.id} className="bg-white/60 backdrop-blur-sm shadow-theme hover:shadow-lg transition-all group">
+              <Card key={mentor.id} className="bg-white shadow-theme hover:shadow-theme-lg transition-all group">
                 <CardContent className="p-6">
                   <div className="text-center">
                     <Image 
@@ -408,20 +424,20 @@ export default function HomePage() {
                       alt={mentor.name}
                       width={96}
                       height={96}
-                      className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yen-purple/20 group-hover:border-yen-purple/40 transition-all"
+                      className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-momentus-copper/20 group-hover:border-momentus-copper transition-all"
                     />
-                    <h3 className="text-xl font-semibold text-yen-purple mb-1">{mentor.name}</h3>
-                    <p className="text-sm font-medium text-gray-700 mb-2">{mentor.title}</p>
-                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                    <h3 className="text-xl font-semibold text-momentus-navy mb-1">{mentor.name}</h3>
+                    <p className="text-sm font-medium text-momentus-text mb-2">{mentor.title}</p>
+                    <p className="text-sm text-momentus-text-light mb-4 line-clamp-3">
                       {mentor.bio}
                     </p>
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="btn-hover-glow"
+                      className="btn-hover-lift border-momentus-copper text-momentus-copper hover:bg-momentus-copper hover:text-white"
                       onClick={() => window.open(mentor.linkedinUrl, '_blank')}
                     >
-                      <span className="text-blue-600 mr-2">🔗</span>
+                      <span className="mr-2">🔗</span>
                       Connect on LinkedIn
                     </Button>
                   </div>
@@ -433,7 +449,7 @@ export default function HomePage() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gradient-purple-pink py-20">
+      <section className="bg-momentus-navy py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -446,8 +462,7 @@ export default function HomePage() {
             <Link href="/contact">
               <Button
                 size="lg"
-                variant="secondary"
-                className="btn-hover-glow text-lg px-8 py-4 bg-white text-yen-purple hover:bg-white/90 border-2 border-white"
+                className="btn-hover-lift text-lg px-8 py-4 bg-momentus-copper hover:bg-momentus-copper-light text-white border-2 border-momentus-copper"
               >
                 Schedule Consultation
               </Button>
@@ -456,7 +471,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="btn-hover-glow text-lg px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-yen-purple bg-white/10 backdrop-blur-sm"
+                className="btn-hover-lift text-lg px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-momentus-navy"
               >
                 Discover Our Story
               </Button>
@@ -466,7 +481,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-yen-purple text-white py-12">
+      <footer className="bg-momentus-navy-dark text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
@@ -480,38 +495,38 @@ export default function HomePage() {
                 />
                 <span className="text-xl font-bold">Momentus Motion</span>
               </div>
-              <p className="text-yen-pink-light">
+              <p className="text-white/70">
                 Driving innovation and excellence in business solutions for forward-thinking organizations.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <h4 className="text-lg font-semibold mb-4 text-momentus-copper">Quick Links</h4>
               <ul className="space-y-2">
-                <li><Link href="/about" className="text-yen-pink-light hover:text-white">About Us</Link></li>
-                <li><Link href="/projects" className="text-yen-pink-light hover:text-white">Our Work</Link></li>
-                <li><Link href="/contact" className="text-yen-pink-light hover:text-white">Contact</Link></li>
+                <li><Link href="/about" className="text-white/70 hover:text-momentus-copper transition-colors">About Us</Link></li>
+                <li><Link href="/projects" className="text-white/70 hover:text-momentus-copper transition-colors">Our Work</Link></li>
+                <li><Link href="/contact" className="text-white/70 hover:text-momentus-copper transition-colors">Contact</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <h4 className="text-lg font-semibold mb-4 text-momentus-copper">Services</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-yen-pink-light hover:text-white">Consulting</a></li>
-                <li><a href="#" className="text-yen-pink-light hover:text-white">Digital Transformation</a></li>
-                <li><a href="#" className="text-yen-pink-light hover:text-white">Market Analysis</a></li>
-                <li><a href="#" className="text-yen-pink-light hover:text-white">Brand Development</a></li>
+                <li><a href="#" className="text-white/70 hover:text-momentus-copper transition-colors">Consulting</a></li>
+                <li><a href="#" className="text-white/70 hover:text-momentus-copper transition-colors">Digital Transformation</a></li>
+                <li><a href="#" className="text-white/70 hover:text-momentus-copper transition-colors">Market Analysis</a></li>
+                <li><a href="#" className="text-white/70 hover:text-momentus-copper transition-colors">Brand Development</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-semibold mb-4">Connect</h4>
+              <h4 className="text-lg font-semibold mb-4 text-momentus-copper">Connect</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-yen-pink-light hover:text-white">Newsletter</a></li>
-                <li><a href="#" className="text-yen-pink-light hover:text-white">Social Media</a></li>
-                <li><a href="#" className="text-yen-pink-light hover:text-white">Partners</a></li>
+                <li><a href="#" className="text-white/70 hover:text-momentus-copper transition-colors">Newsletter</a></li>
+                <li><a href="#" className="text-white/70 hover:text-momentus-copper transition-colors">Social Media</a></li>
+                <li><a href="#" className="text-white/70 hover:text-momentus-copper transition-colors">Partners</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-yen-purple-light pt-8 text-center">
-            <p className="text-yen-pink-light">
+          <div className="border-t border-white/20 pt-8 text-center">
+            <p className="text-white/70">
               © 2025 Momentus Motion Corporation. Empowering businesses to achieve extraordinary results.
             </p>
           </div>
