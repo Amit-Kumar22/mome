@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -12,9 +11,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-light-theme">
-      {/* Header */}
-      <Navbar />
-
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center max-w-4xl mx-auto mb-16">
